@@ -1,0 +1,274 @@
+{
+  "status": "ok",
+  "meta_source": "analysis_meta.json",
+  "source_text": "greek_raw.txt",
+  "total_source_lines": 865,
+  "blank_source_line_count": 60,
+  "record_count": 805,
+  "meta_record_count": 805,
+  "batch_count": 29,
+  "deleted_or_omitted_record_lines": [
+    338,
+    808,
+    832
+  ],
+  "deleted_or_omitted_record_count": 3,
+  "uncertain_record_count": 13,
+  "token_count": 4408,
+  "lemma_count": 949,
+  "duplicate_source_lines": [],
+  "missing_nonblank_source_lines": [],
+  "out_of_range_record_lines": [],
+  "batch_range_violations": [],
+  "schema_key_violations": [],
+  "token_shape_violations": [],
+  "non_nfc_reading_lines": [],
+  "ascii_quote_reading_lines": [],
+  "clean_text_omitted_record_lines": [
+    338,
+    808,
+    832
+  ],
+  "batch_summaries": [
+    {
+      "file": "analysis_0001_0030.jsonl",
+      "range_start": 1,
+      "range_end": 30,
+      "record_count": 29,
+      "first_record": 1,
+      "last_record": 30
+    },
+    {
+      "file": "analysis_0031_0050.jsonl",
+      "range_start": 31,
+      "range_end": 50,
+      "record_count": 20,
+      "first_record": 31,
+      "last_record": 50
+    },
+    {
+      "file": "analysis_0051_0070.jsonl",
+      "range_start": 51,
+      "range_end": 70,
+      "record_count": 18,
+      "first_record": 51,
+      "last_record": 70
+    },
+    {
+      "file": "analysis_0071_0100.jsonl",
+      "range_start": 71,
+      "range_end": 100,
+      "record_count": 28,
+      "first_record": 71,
+      "last_record": 100
+    },
+    {
+      "file": "analysis_0101_0130.jsonl",
+      "range_start": 101,
+      "range_end": 130,
+      "record_count": 29,
+      "first_record": 101,
+      "last_record": 130
+    },
+    {
+      "file": "analysis_0131_0160.jsonl",
+      "range_start": 131,
+      "range_end": 160,
+      "record_count": 29,
+      "first_record": 131,
+      "last_record": 160
+    },
+    {
+      "file": "analysis_0161_0190.jsonl",
+      "range_start": 161,
+      "range_end": 190,
+      "record_count": 29,
+      "first_record": 161,
+      "last_record": 190
+    },
+    {
+      "file": "analysis_0191_0220.jsonl",
+      "range_start": 191,
+      "range_end": 220,
+      "record_count": 28,
+      "first_record": 191,
+      "last_record": 220
+    },
+    {
+      "file": "analysis_0221_0250.jsonl",
+      "range_start": 221,
+      "range_end": 250,
+      "record_count": 28,
+      "first_record": 221,
+      "last_record": 250
+    },
+    {
+      "file": "analysis_0251_0280.jsonl",
+      "range_start": 251,
+      "range_end": 280,
+      "record_count": 27,
+      "first_record": 251,
+      "last_record": 280
+    },
+    {
+      "file": "analysis_0281_0310.jsonl",
+      "range_start": 281,
+      "range_end": 310,
+      "record_count": 28,
+      "first_record": 281,
+      "last_record": 310
+    },
+    {
+      "file": "analysis_0311_0340.jsonl",
+      "range_start": 311,
+      "range_end": 340,
+      "record_count": 27,
+      "first_record": 311,
+      "last_record": 340
+    },
+    {
+      "file": "analysis_0341_0370.jsonl",
+      "range_start": 341,
+      "range_end": 370,
+      "record_count": 28,
+      "first_record": 341,
+      "last_record": 370
+    },
+    {
+      "file": "analysis_0371_0400.jsonl",
+      "range_start": 371,
+      "range_end": 400,
+      "record_count": 28,
+      "first_record": 371,
+      "last_record": 400
+    },
+    {
+      "file": "analysis_0401_0430.jsonl",
+      "range_start": 401,
+      "range_end": 430,
+      "record_count": 26,
+      "first_record": 401,
+      "last_record": 430
+    },
+    {
+      "file": "analysis_0431_0460.jsonl",
+      "range_start": 431,
+      "range_end": 460,
+      "record_count": 27,
+      "first_record": 431,
+      "last_record": 460
+    },
+    {
+      "file": "analysis_0461_0490.jsonl",
+      "range_start": 461,
+      "range_end": 490,
+      "record_count": 28,
+      "first_record": 461,
+      "last_record": 490
+    },
+    {
+      "file": "analysis_0491_0520.jsonl",
+      "range_start": 491,
+      "range_end": 520,
+      "record_count": 29,
+      "first_record": 491,
+      "last_record": 520
+    },
+    {
+      "file": "analysis_0521_0550.jsonl",
+      "range_start": 521,
+      "range_end": 550,
+      "record_count": 28,
+      "first_record": 521,
+      "last_record": 550
+    },
+    {
+      "file": "analysis_0551_0580.jsonl",
+      "range_start": 551,
+      "range_end": 580,
+      "record_count": 28,
+      "first_record": 551,
+      "last_record": 580
+    },
+    {
+      "file": "analysis_0581_0610.jsonl",
+      "range_start": 581,
+      "range_end": 610,
+      "record_count": 28,
+      "first_record": 581,
+      "last_record": 610
+    },
+    {
+      "file": "analysis_0611_0640.jsonl",
+      "range_start": 611,
+      "range_end": 640,
+      "record_count": 28,
+      "first_record": 612,
+      "last_record": 640
+    },
+    {
+      "file": "analysis_0641_0670.jsonl",
+      "range_start": 641,
+      "range_end": 670,
+      "record_count": 29,
+      "first_record": 642,
+      "last_record": 670
+    },
+    {
+      "file": "analysis_0671_0700.jsonl",
+      "range_start": 671,
+      "range_end": 700,
+      "record_count": 27,
+      "first_record": 671,
+      "last_record": 700
+    },
+    {
+      "file": "analysis_0701_0730.jsonl",
+      "range_start": 701,
+      "range_end": 730,
+      "record_count": 28,
+      "first_record": 701,
+      "last_record": 730
+    },
+    {
+      "file": "analysis_0731_0760.jsonl",
+      "range_start": 731,
+      "range_end": 760,
+      "record_count": 28,
+      "first_record": 731,
+      "last_record": 760
+    },
+    {
+      "file": "analysis_0761_0790.jsonl",
+      "range_start": 761,
+      "range_end": 790,
+      "record_count": 25,
+      "first_record": 763,
+      "last_record": 790
+    },
+    {
+      "file": "analysis_0791_0820.jsonl",
+      "range_start": 791,
+      "range_end": 820,
+      "record_count": 27,
+      "first_record": 791,
+      "last_record": 820
+    },
+    {
+      "file": "analysis_0821_0865.jsonl",
+      "range_start": 821,
+      "range_end": 865,
+      "record_count": 43,
+      "first_record": 821,
+      "last_record": 865
+    }
+  ],
+  "artifacts": {
+    "analysis_all_jsonl": "analysis_all.jsonl",
+    "clean_greek_full_txt": "clean_greek_full.txt",
+    "uncertain_readings_csv": "uncertain_readings.csv",
+    "tokens_csv": "tokens.csv",
+    "lemma_index_csv": "lemma_index.csv",
+    "site_data_js": "site/data.js"
+  }
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Melito of Sardis, Peri Pascha</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./data.js"></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <div class="hero-sign">
+          <div class="cross-badge" aria-hidden="true"></div>
+          <p class="eyebrow">Digital Research Edition</p>
+        </div>
+        <h1>Melito of Sardis, <span>Peri Pascha</span></h1>
+        <p class="hero-kicker">Polytonic Greek text, morphological analysis, translation, and syntax in a single reading environment.</p>
+        <p class="lede">
+          A static reading environment for the complete line-by-line analysis of the corpus.
+          Search Greek text, lemmas, glosses, translations, and syntax while moving through the full textual argument.
+        </p>
+      </div>
+      <div class="stats-grid" id="stats-grid" aria-label="Corpus statistics"></div>
+    </header>
+
+    <section class="toolbar" aria-label="Search and filters">
+      <label class="search-box" for="search-input">
+        <span>Search corpus</span>
+        <input id="search-input" type="search" placeholder="Greek, lemma, gloss, translation, syntax..." autocomplete="off">
+      </label>
+      <div class="filter-group" role="group" aria-label="Result filters">
+        <button class="filter-pill is-active" data-mode="all" type="button">All</button>
+        <button class="filter-pill" data-mode="uncertain" type="button">Uncertain</button>
+        <button class="filter-pill" data-mode="deleted" type="button">Deleted / OCR noise</button>
+        <button class="filter-pill" data-mode="emended" type="button">Emended</button>
+      </div>
+      <div class="quick-nav">
+        <button id="jump-uncertain" type="button">Jump to uncertain</button>
+        <button id="jump-deleted" type="button">Jump to deleted</button>
+        <button id="clear-selection" type="button">Clear search</button>
+      </div>
+    </section>
+
+    <main class="workspace">
+      <aside class="sidebar">
+        <div class="sidebar-head">
+          <div>
+            <p class="section-label">Line index</p>
+            <h2 id="sidebar-title">All lines</h2>
+          </div>
+          <p id="sidebar-count" class="sidebar-count"></p>
+        </div>
+        <div id="line-index" class="line-index" aria-label="Filtered line index"></div>
+      </aside>
+
+      <section class="detail" aria-live="polite">
+        <div id="detail-panel" class="detail-panel"></div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

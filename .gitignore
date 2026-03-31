@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+CLAUDE.md
+docs/
+output/
+final.json
+src/melito.egg-info/

@@ -1,0 +1,94 @@
+CHANGE_LOG — Melito, Peri Pascha OCR Corrections
+==================================================
+
+Each entry: LINE | ORIGINAL → CORRECTED | REASON
+
+--- Breathing / accent confusions (ὃ article vs relative) ---
+4   | ὃ λαὸς → ὁ λαὸς | wrong breathing: relative ὃ should be article ὁ
+19  | ὃ νόμος → ὁ νόμος | same
+21  | ὃ τύπος → ὁ τύπος | same
+43  | ὃ παλαιὸς → ὁ παλαιὸς | same
+49  | ὃ ἄνθρωπος → ὁ ἄνθρωπος | same
+247 | ὃ ὃ τύπος → ὃ ὁ τύπος | second ὃ should be article ὁ
+
+--- Systematic ἐϊς → ἐκ (OCR confusion of κ for ϊς) ---
+474 | ἐϊς γῆς → ἐκ γῆς | standard text reads ἐκ γῆς ζώντων (Jer 11:19)
+532 | ἐϊς Μαρίας → ἐκ Μαρίας | preposition requires ἐκ + genitive
+539 | ἐϊς νεκρῶν → ἐκ νεκρῶν | formulaic ἐκ νεκρῶν ἀναστάς
+593 | ἐϊς μνημείου → ἐκ μνημείου | ἐκ μνημείου ἐγειρόμενος
+700 | ἐϊς γενετῆς → ἐκ γενετῆς | ἐκ γενετῆς τυφλούς (from birth)
+703 | ἐϊς μνημείου → ἐκ μνημείου | same as 593
+
+--- Ἰερουσαλήμ / proper noun corrections ---
+44  | ᾿ΙΪερουσαλήμ → Ἰερουσαλήμ | spurious diaeresis on Ι
+316 | ᾿Ϊησοῦ → Ἰησοῦ | spurious diaeresis on Ι
+543 | ᾿ΙΪερουσαλήμ → Ἰερουσαλήμ | same as 44
+745 | ᾿ΙΪερουσαλήμ → Ἰερουσαλήμ | same as 44
+
+--- Single-character OCR corruptions ---
+47  | υἷός → υἱός | circumflex → acute on iota
+55  | ὧς θεὸς → ὡς θεὸς | spurious circumflex on ὡς (comparative particle)
+66  | τῶι αἰώνων → τῶν αἰώνων | OCR ι for ν
+72  | Πωυσεῖ → Μωυσεῖ | OCR Π for Μ
+85  | ἰσραήλ → Ἰσραήλ | missing capital
+90  | ἀἰγυπτον → Αἴγυπτον | broken breathing + missing capital
+93  | σραὴλ → Ἰσραὴλ | missing initial Ἰ
+97  | "Οπότε → Ὁπότε | OCR quote mark for smooth breathing
+102 | Δίγυπτον → Αἴγυπτον | OCR Δ for Α, broken diacritics
+109 | ἠἡτέκνωσεν → ἠτέκνωσεν | doubled η
+110 | ᾿ περιελθὼν → περιελθὼν | stray breathing mark before word
+113 | ἐθάμασεν → ἐδάμασεν | OCR θ for δ (tamed/subdued, not marveled)
+122 | ψυχῆ → ψυχῇ | wrong accent: dative requires iota subscript
+130 | κιθῶνα → χιτῶνα | OCR κ for χ, metathesis ιθ → ιτ
+133 | κιθὼν → χιτὼν | same as 130
+138 | ἣν → ἦν | relative ἣν should be imperfect ἦν
+154 | Aἰγυπτίων → Αἰγυπτίων | Latin A (U+0041) for Greek Α (U+0391)
+183 | ἠδαφίσθη → ἐδαφίσθη | OCR η for ε (augment of ἐδαφίζω)
+198 | φωνῇ᾽ → φωνῇ· | stray apostrophe for raised dot
+201 | κοπτόμενοι., → κοπτόμενοι, | extra period
+210 | ηὑὐρίσκετο → ηὑρίσκετο | doubled υ
+216 | ἣ τὸ → ἢ τὸ | relative ἣ should be disjunctive ἢ
+294 | φανερωθῶντος → φανερωθέντος | wrong vowel in aorist passive participle
+297 | τίμιος ἡ → τιμία ἡ | gender agreement: σφαγή is feminine
+331 | Ο θεὸς → Ὁ θεὸς | missing breathing on Ο
+336 | "Ἔδεμ → Ἔδεμ | stray quotation mark
+338 | ὦ νομοθετήσας διὰ τῆς ἐντολῆς → [DELETED] | <UNCERTAIN: possible OCR duplication of line 337>
+382 | ξένος ἕένον → ξένος ξένον | broken initial xi + doubled epsilon
+396 | ἴουκετι προσλαλουνΐ → <UNCERTAIN: οὐκέτι προσλαλοῦν> | heavily corrupted
+431 | ἐκ. μακροῦ → ἐκ μακροῦ | stray period
+433 | ἐς μακροῦ → ἐκ μακροῦ | OCR ς for κ
+467 | αὐτοῦ ὃ → αὐτοῦ. | stray ὃ at line end
+469 | Eγὼ → Ἐγὼ | Latin E (U+0045) for Greek Ε with breathing
+477 | 'ῆς → Ὡς | OCR apostrophe for breathing; initial Ω missing
+544 | ζὑπὸ → ὑπὸ | stray ζ prefixed
+577 | ἔσποτα → Δέσποτα | missing initial Δ
+586 | ἐβροησας → ἐβόησας | OCR ρ for ο, missing accent
+588 | ἐργὰ → ἔργα | wrong accent direction
+589 | ἐδυσώπησῶ → ἐδυσώπησέ | wrong accent on final syllable
+600 | σώματιδ → σώματι, | OCR δ for comma
+601 | ἄκανθαν → ἀκάνθας | accusative plural expected
+655 | Ἡβραὰμ → Ἀβραὰμ | OCR Η for Α
+700 | τίμησαΐ → τίμησαί | accent on wrong letter
+709 | θλῦψιν → θλῖψιν | wrong vowel υ for ι
+732 | πικροΐ → πικροί | accent on wrong letter
+735 | πικραΐ → πικραί | same
+742 | πικραΐ → πικραί | same
+774 | συνεσκότασεν,5 → συνεσκότασεν, | stray digit 5
+780 | ἡ (at line end) → · | stray article should be raised dot
+784 | ἐτϊρόμαξ]ας → ἐτρόμαξας | broken τ + spurious bracket
+795 | οὖις ἐ[δέξω τὸν κύριον] → οὐκ ἐδέξω τὸν κύριον | OCR corruption + unnecessary brackets
+808 | 3 ν 3 - 4 ' 30 ἢ 3 ΄ → [DELETED] | pure OCR noise line
+821 | ἰσχυρὸνξ → ἰσχυρὸν | stray ξ appended
+832 | τιν κα Ια τάκ ἃ → [DELETED] | pure OCR noise line
+841 | ὗτός → οὗτός | missing initial ο
+856 | ἢ (at line end) → · | disjunctive ἢ should be raised dot
+
+--- Quotation marks normalized ---
+Lines 10, 12, 14, 16, 20, 22, 24, 56, 77, 80, 89, 108, 136, 159, 232,
+236, 238, 246, 253, 257, 260, 298, 300, 302, 304, 306, 308, 310, 417,
+503, 530, 531, 537 | " → · | straight quotes normalized to ἄνω στιγμή
+Lines 605, 346 | stray trailing quotation marks removed
+
+--- Preserved as-is (editorial) ---
+All editorial brackets [ ] preserved exactly as in source.
+Line 859 | οὗτος (ὁ) στρατηγός | editorial parentheses preserved
