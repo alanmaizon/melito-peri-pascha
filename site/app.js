@@ -2,6 +2,87 @@
 
 const DATA = window.PERI_PASCHA_DATA;
 
+/* Audio section map — each entry: [startLine, endLine, filename] */
+const AUDIO_SECTIONS = [
+  [1, 25, "speech-1-25.mp3"],
+  [26, 52, "speech-26-52.mp3"],
+  [54, 82, "speech-54-82.mp3"],
+  [84, 113, "speech-84-113.mp3"],
+  [115, 142, "speech-115-142.mp3"],
+  [144, 171, "speech-144-171.mp3"],
+  [172, 202, "speech-172-202.mp3"],
+  [204, 260, "speech-204-260.mp3"],
+  [263, 291, "speech-263-291.mp3"],
+  [294, 337, "speech-294-337.mp3"],
+  [339, 385, "speech-339-385.mp3"],
+  [388, 425, "speech-388-425.mp3"],
+  [427, 470, "speech-427-470.mp3"],
+  [473, 496, "speech-473-496.mp3"],
+  [498, 555, "speech-498-555.mp3"],
+  [558, 610, "speech-558-610.mp3"],
+  [612, 671, "speech-612-671.mp3"],
+  [674, 725, "speech-674-725.mp3"],
+  [727, 783, "speech-727-783.mp3"],
+  [784, 865, "speech-784-865.mp3"],
+];
+
+function audioForLine(sl) {
+  for (const [start, end, file] of AUDIO_SECTIONS) {
+    if (sl >= start && sl <= end) return { start, end, file: `./audio/${file}` };
+  }
+  return null;
+}
+
+/* Persistent audio state — survives detail panel re-renders */
+const audioState = {
+  el: new Audio(),
+  file: null,
+  playing: false,
+  sectionStart: null,
+  sectionEnd: null,
+};
+
+audioState.el.addEventListener("ended", () => {
+  audioState.playing = false;
+  updateAudioButton();
+});
+
+function toggleAudio(audioInfo) {
+  const { el } = audioState;
+
+  if (audioState.file === audioInfo.file) {
+    // Same section — toggle play/pause
+    if (audioState.playing) {
+      el.pause();
+      audioState.playing = false;
+    } else {
+      el.play();
+      audioState.playing = true;
+    }
+  } else {
+    // Different section — switch track
+    el.src = audioInfo.file;
+    el.play();
+    audioState.file = audioInfo.file;
+    audioState.playing = true;
+    audioState.sectionStart = audioInfo.start;
+    audioState.sectionEnd = audioInfo.end;
+  }
+  updateAudioButton();
+}
+
+function updateAudioButton() {
+  const btn = document.querySelector(".audio-play-btn");
+  if (!btn) return;
+  if (audioState.playing) {
+    btn.classList.add("is-playing");
+    btn.innerHTML = "&#9646;&#9646;";
+  } else {
+    btn.classList.remove("is-playing");
+    btn.innerHTML = "&#9654;";
+  }
+}
+
 const state = {
   query: "",
   mode: "all",
@@ -321,6 +402,29 @@ function renderDetail(record) {
     ana.innerHTML = `<strong>Analyzed:</strong> ${escapeHtml(record.ana)}`;
     reading.appendChild(ana);
   }
+
+  /* Audio player button — hooks into persistent audioState */
+  const audioInfo = audioForLine(record.sl);
+  if (audioInfo) {
+    const audioBlock = document.createElement("div");
+    audioBlock.className = "audio-block";
+    const isThisSection = audioState.file === audioInfo.file;
+    const showPause = isThisSection && audioState.playing;
+    audioBlock.innerHTML = `
+      <div class="audio-header">
+        <button class="audio-play-btn${showPause ? " is-playing" : ""}" type="button" aria-label="Play audio">${showPause ? "&#9646;&#9646;" : "&#9654;"}</button>
+        <span class="audio-label">Listen — lines ${audioInfo.start}–${audioInfo.end}</span>
+      </div>
+    `;
+    const btn = audioBlock.querySelector(".audio-play-btn");
+
+    btn.addEventListener("click", () => {
+      toggleAudio(audioInfo);
+    });
+
+    reading.appendChild(audioBlock);
+  }
+
   wrapper.appendChild(reading);
 
   const info = document.createElement("div");

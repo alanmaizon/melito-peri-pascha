@@ -652,3 +652,56 @@ button {
     font-size: 1.02rem;
   }
 }
+
+/* ── Audio player ──────────────────────────────── */
+
+.audio-block {
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.8rem;
+  background: var(--accent-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.audio-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.audio-play-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  background: var(--panel);
+  color: var(--accent);
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.audio-play-btn:hover {
+  background: var(--accent);
+  color: var(--panel);
+}
+
+.audio-play-btn.is-playing {
+  background: var(--accent);
+  color: var(--panel);
+}
+
+.audio-label {
+  font-family: var(--ui);
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.audio-player {
+  display: none;
+}

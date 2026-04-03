@@ -8,6 +8,7 @@ import click
 from melito.ocr import check_tesseract_lang, ocr_image
 from melito.postprocess import postprocess
 from melito.preprocess import preprocess
+from melito.transliterate import transliterate_file
 
 
 SUPPORTED_EXTENSIONS = {".png", ".jpg", ".jpeg", ".tif", ".tiff", ".bmp"}
@@ -67,3 +68,23 @@ def main(
         click.echo(f"Combined output → {combined_path}")
 
     click.echo(f"Done. {len(images)} pages → {output_dir}/")
+
+
+@click.command("tts-prep")
+@click.argument("input_file", type=click.Path(exists=True, dir_okay=False, path_type=Path))
+@click.option("-o", "--output", type=click.Path(path_type=Path), default=None,
+              help="Output file path (default: <input>_phonetic.txt or _simple.txt).")
+@click.option("--mode", type=click.Choice(["latin", "greek"]), default="greek",
+              help="'greek' = simplified Greek alphabet (best for Gemini). "
+                   "'latin' = full Latin phonetic transliteration.")
+def tts_prep(input_file: Path, output: Path | None, mode: str) -> None:
+    """Prepare Greek text for TTS engines.
+
+    --mode greek  (default): strips diacritics/breathing, keeps Greek letters.
+    --mode latin: full Latin-alphabet transliteration (2nd c. Koine, Sardis).
+    """
+    if output is None:
+        suffix = "_simple.txt" if mode == "greek" else "_phonetic.txt"
+        output = input_file.with_name(input_file.stem + suffix)
+    transliterate_file(str(input_file), str(output), mode=mode)
+    click.echo(f"TTS output ({mode}) → {output}")

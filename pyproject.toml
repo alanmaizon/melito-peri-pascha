@@ -12,6 +12,7 @@ dependencies = [
 
 [project.scripts]
 melito = "melito.cli:main"
+melito-tts = "melito.cli:tts_prep"
 
 [build-system]
 requires = ["setuptools>=68"]
